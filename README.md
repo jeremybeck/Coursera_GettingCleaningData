@@ -38,3 +38,6 @@ run_analysis.R will write out two files in the user's working directory:
 
 * _tidy\_data.csv_ : a summarized version of the data set containing the average values of mean and standard deviation of measurements per participant in each activity
 * _unsummarized\_data.csv_ : the formatted and joined data prior to the aggregation step that generates tidy_data.csv
+
+
+## Thanks for Reviewing!
