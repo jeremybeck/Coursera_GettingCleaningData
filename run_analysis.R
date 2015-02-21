@@ -80,14 +80,14 @@ data_format <- function(dir = './UCI HAR Dataset/', write_data = T) {
   message("Summarizing Data by Subject and Activity")
   
   ## The summary can be handled using a dplyr chain.
-  ## We are going to order by Activity First, then Subject - I find it much easier to analyse across subjects that way
+  ## We are going to order by Activity First, then Subject - I find it much easier to analyze across subjects that way
   
   tidy_data <- all_data %>% group_by(Activity, Subject_ID) %>% summarise_each(funs(mean))
   
   if (write_data == TRUE) { 
     message("Writing Output Files")
-    write.csv(tidy_data,row.names=F,file=paste(path,"tidy_data.csv",sep=''))
-    write.csv(tidy_data,row.names=F,file=paste(path,"unsummarized_data.csv", sep=''))
+    write.csv(tidy_data,row.names=F,file="tidy_data.csv")
+    write.csv(tidy_data,row.names=F,file="unsummarized_data.csv")
   }
 
   return(tidy_data)
