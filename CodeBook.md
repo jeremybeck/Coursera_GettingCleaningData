@@ -1,5 +1,5 @@
 ## Overview 
-This codebook contains detailed instructions for combining and reformatting the UCI Human Activity Recognition Dataset, described in further detail at the source: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+This codebook contains an overview of the data in the UCI Human Activity Recognition Data set, described in further detail at the source: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
 This data set is comprised of a series of accelerometer readings taken from smartphones. There were thirty participants who took part in five activities: 
 
@@ -15,7 +15,7 @@ This data set is comprised of a series of accelerometer readings taken from smar
 
 ##Data Set Description:
 
-A description of the individual measurements can be obtained from the original study provided at the link above, and described in greater detail in the file "features_info.txt" in the original data source (pasted below for convenience).  
+A description of the individual measurements can be obtained from the original study provided at the link above, and described in greater detail in the file "features_info.txt" in the original data source (pasted below for convenience). In the original data set, each of the measurements were normalized to a range of [-1,1].  The normalized measures are unitless.  
 
 In the tidy data set, we are only reporting the measurements of the mean() and std(), with multiple measurements aggregated for individual participants within each activity. Column names in the tidy data set have been modified for maximum compatibility with R; dashes were changed to underscores, and the parentheses were removed: e.g. "tBodyAcc-X-mean()" has become "tBodyAcc_X_mean" in the tidy data set.  Otherwise, the names are identical to those described in the original data source. 
 
