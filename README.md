@@ -23,7 +23,18 @@ Alternatively, the script can be executed from the command line (for example on 
 R --no-save < run_analysis.R
 ```
 
-The script will write out two files:
+The script performs the following tasks:
+
+1. Loads in the Training and Test set data contained in the subfolders ./train and ./test
+2. Uses cbind to join the subject_ID, activity labels, and measurement vectors
+3. Uses rbind to join the training and test sets
+4. Appends useful activity names
+5. Replaces column names from the features.txt file in the UCI HAR Dataset, and reformats the names for maximum R compatibility
+6. Extract the subset of columns that contain mean() and std() measurements.
+7. Aggregates repeat measurements for each subject within each activity using dplyr, and returns the mean of the multiple measurements
+8. Outputs the spiffy, tidy data, as well as the formatted, unaggregated data
+
+run_analysis.R will write out two files in the user's working directory:
 
 * _tidy\_data.csv_ : a summarized version of the data set containing the average values of mean and standard deviation of measurements per participant in each activity
 * _unsummarized\_data.csv_ : the formatted and joined data prior to the aggregation step that generates tidy_data.csv
